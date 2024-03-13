@@ -1,0 +1,16 @@
+<div class="container-fluid bg-dark">
+    <div class="d-flex flex-column justify-content-center">
+        
+        <cdk-virtual-scroll-viewport itemSize="150" class="container">
+            <p class="text-center gallery pt-5" style="color: orange;">OUR <span class="text-white"> GALLERY</span></p>
+            <p class="gallery p-4 text-center" style="color: orange;">Organized Birthday Events, Marriage Events </p>
+           <div class="row justify-content-center">
+           
+            <div *cdkVirtualFor="let data of services" class="viewport card col-lg-3 m-4" style="width: 20rem;">
+                <img src="{{data.imageUrl}}" class="event-image" aria-label="oragnized event images">
+                <p>{{data.data}}</p>
+               </div>
+           </div>
+        </cdk-virtual-scroll-viewport>
+    </div>
+</div>

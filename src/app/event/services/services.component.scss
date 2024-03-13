@@ -1,0 +1,15 @@
+.info{
+    text-align: justify;
+   
+}
+.viewport{
+    height: 300px;
+}
+.container{
+    height: 400px;
+
+}
+.container::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}

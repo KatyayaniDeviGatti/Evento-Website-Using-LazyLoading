@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column">
+            <img src="assets/images/logo.jpg" class="logo" alt="Evento logo">
+            <div class="card mb-5" style="width: 30rem;">
+                <div class="card-body">
+                <h1 class="card-title fw-bold text-center" style="font-size: 30px;">Register</h1>
+                <form #myForm="ngForm" #formElement>
+                    <label class="form-label pt-3">FirstName</label>
+                    <input type="text" class="form-control" [(ngModel)]="this.RegisterObj.FirstName" name="FirstName" aria-label="Enter your FirstName" required #formElementChild>
+
+                    <label class="form-label pt-3">LastName</label>
+                    <input type="text" class="form-control" [(ngModel)]="this.RegisterObj.LastName" name="LastName" aria-label="Enter your LastName" required #formElementChild>
+
+                    <label class="form-label pt-3">Phone Number</label>
+                    <input type="number" class="form-control" [(ngModel)]="this.RegisterObj.PhoneNumber" name="PhoneNumber" aria-label="Enter your Phone Number" required #formElementChild> 
+
+                    <label class="form-label pt-3">UserName<span aria-hidden="true">*</span></label>
+                    <input type="text" class="form-control" [(ngModel)]="this.RegisterObj.UserName" name="UserName" aria-label="Enter your UserName" aria-required="true" required #formElementChild>
+
+                    <label class="form-label pt-3">Password<span aria-hidden="true">*</span></label>
+                    <input type="password" class="form-control" [(ngModel)]="this.RegisterObj.Password" name="Password" aria-label="Enter your Password" aria-required="true" required #formElementChild>
+
+                    <button type="submit" class="btn btn-warning text-white" (click)="postRegisterData()" [disabled]="myForm.invalid" #formElementChild>Register</button>
+                    <div class="text-center p-2">
+                        <a (click)="loginUser()" style="cursor: pointer; margin-top: 50px;"><span style="padding-right: 5px;"> Already Have an Account?</span>Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

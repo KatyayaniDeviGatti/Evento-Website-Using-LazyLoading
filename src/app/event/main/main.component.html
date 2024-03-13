@@ -1,0 +1,14 @@
+<div class="container-fluid bg-dark">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+<div class="to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+  <i class="bi bi-arrow-up-circle-fill image-size" style="color: white;"></i>
+</div>
+    
+
+
+
+
+
